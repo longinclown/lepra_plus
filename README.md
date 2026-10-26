@@ -1,5 +1,5 @@
 # Lepra+
-Дополнительные опции кастомизации для сайта Leprosorium.ru
+Дополнительные опции кастомизации для сайта leprosorium.ru
 
 ![show m later](lepra_plus_1.0_screen.png)
 
