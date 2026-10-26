@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lepra+ — настройки</title>
+<style>
+body{font:15px/1.55 system-ui,sans-serif;max-width:760px;margin:36px auto;padding:0 20px;color:#202124}
+h1{font-size:25px;margin-bottom:8px}p{color:#555}.feature{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid #ddd}.feature input{margin-top:5px;transform:scale(1.15)}.feature label{flex:1}.male{color:#3A3AC4}.female{color:#DD2B2B}.status{color:#167a36;min-height:1.5em}
+</style>
+</head>
+<body>
+<h1>Lepra+</h1>
+<p>Дополнительные функции для Leprosorium.<br>Настройки сохраняются автоматически. После изменения переключателя обновите открытую вкладку сайта.</p>
+<section id="features">
+<div class="feature"><input type="checkbox" id="commentsratings" checked><label for="commentsratings">Рейтинг комментариев</label></div>
+<div class="feature"><input type="checkbox" id="usernumber"><label for="usernumber">Номер пользователя рядом с %username%</label></div>
+<div class="feature"><input type="checkbox" id="commentsgender"><label for="commentsgender">Половая принадлежность (<span class="male">мужчина</span>/<span class="female">женщина</span>)</label></div>
+<div class="feature"><input type="checkbox" id="leprotitles"><label for="leprotitles">Заголовок поста во вкладке браузера</label></div>
+<div class="feature"><input type="checkbox" id="preview"><label for="preview">Предварительный просмотр для поста/комментария</label></div>
+</section>
+<p class="status" id="status" role="status"></p>
+<script src="options.js"></script>
+</body>
+</html>
