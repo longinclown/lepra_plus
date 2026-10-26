@@ -1,6 +1,8 @@
 # Lepra+
 Дополнительные опции кастомизации для сайта Leprosorium
 
+![show m later](lepra_plus_1.0_screen.png)
+
 ---
 Установка в Chromium / Chrome / Edge:
 -
