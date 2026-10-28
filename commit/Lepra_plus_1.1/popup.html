@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+body{font:13px/1.4 system-ui,sans-serif;width:200px;box-sizing:border-box;padding:10px;margin:0;color:#202124}header{font-size:16px;font-weight:700;margin-bottom:8px}.row{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid #e5e5e5;cursor:pointer}.row:hover{background:#f4f7fb}.label{color:#555;min-width:0;overflow-wrap:anywhere}.value{font-weight:650;white-space:nowrap}.muted{color:#777;font-size:11px;margin:5px 0}.error{color:#b3261e}.bottom{display:flex;gap:6px;margin-top:10px}button{flex:1;min-width:0;padding:6px 4px;cursor:pointer;background:#f4f4f4;border:1px solid #ddd;border-radius:5px;font-size:12px}
+</style></head><body><header>Lepra+</header><div id="status" class="muted">Загрузка данных…</div>
+<div class="row" id="karmaRow" title="Открыть свой профиль"><span class="label">Карма</span><span class="value" id="karma">—</span></div>
+<div class="row" id="myRow" title="Открыть Мои вещи"><span class="label">Мои вещи</span><span class="value" id="my">—</span></div>
+<div class="row" id="inboxRow" title="Открыть Инбокс"><span class="label">Инбокс</span><span class="value" id="inbox">—</span></div>
+<div class="bottom"><button id="refresh">Обновить</button><button id="settings">Настройки</button></div><script src="popup.js"></script></body></html>

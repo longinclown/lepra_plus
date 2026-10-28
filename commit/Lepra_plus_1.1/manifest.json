@@ -1,0 +1,61 @@
+{
+  "manifest_version": 3,
+  "name": "Lepra+",
+  "version": "1.1",
+  "description": "Полезные функции для Leprosorium и показатели аккаунта в popup.",
+  "icons": {
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "alarms",
+    "tabs",
+    "scripting",
+    "cookies"
+  ],
+  "host_permissions": [
+    "https://leprosorium.ru/*",
+    "https://*.leprosorium.ru/*",
+    "http://leprosorium.ru/*",
+    "http://*.leprosorium.ru/*",
+    "https://leprosorium.com/*",
+    "https://*.leprosorium.com/*",
+    "http://leprosorium.com/*",
+    "http://*.leprosorium.com/*"
+  ],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "action": {
+    "default_title": "Lepra+",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "icons/icon32.png"
+    }
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://leprosorium.ru/*",
+        "http://*.leprosorium.ru/*",
+        "https://leprosorium.ru/*",
+        "https://*.leprosorium.ru/*",
+        "http://leprosorium.com/*",
+        "http://*.leprosorium.com/*",
+        "https://leprosorium.com/*",
+        "https://*.leprosorium.com/*"
+      ],
+      "all_frames": false,
+      "run_at": "document_idle",
+      "js": [
+        "panel_bridge.js",
+        "zepto.js",
+        "compat.js",
+        "bundle.js"
+      ]
+    }
+  ]
+}
