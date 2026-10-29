@@ -3,6 +3,7 @@
 
 - [Основные функции](#основные-функции)
 - [Установка в Chrome/Opera](#установка-в-chromium--chrome--edge)
+- [Описание](#описание)
 
 ![main image](lepra_plus_scr.png)
 
