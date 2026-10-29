@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box}
+body{font:13px/1.4 system-ui,sans-serif;width:190px;padding:9px;margin:0;color:#202124}
+header{display:flex;align-items:center;justify-content:center;margin:0 0 5px;min-height:29px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:7px 0;border-bottom:1px solid #e5e5e5;cursor:pointer;min-width:0}
+.row:hover{background:#f4f7fb}
+.label{color:#555;min-width:0;white-space:nowrap}
+.value{font-weight:650;white-space:nowrap;font-variant-numeric:tabular-nums;font-size:12px}
+.muted{color:#777;font-size:11px;margin:4px 0 5px;overflow-wrap:anywhere}
+.error{color:#b3261e}
+#settings{display:flex;align-items:center;justify-content:center;width:29px;height:29px;padding:0;cursor:pointer;background:#f4f4f4;border:1px solid #ddd;border-radius:6px;color:#444}
+#settings:hover{background:#eaeaea}
+#settings svg{width:16px;height:16px;display:block}
+</style>
+</head>
+<body>
+<header><button id="settings" type="button" title="Настройки" aria-label="Настройки">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z"/><path d="m19.4 15 .1.1a1.7 1.7 0 0 1-2.4 2.4l-.1-.1a1.7 1.7 0 0 0-2.9 1.2v.2a1.7 1.7 0 0 1-3.4 0v-.2a1.7 1.7 0 0 0-2.9-1.2l-.1.1a1.7 1.7 0 0 1-2.4-2.4l.1-.1a1.7 1.7 0 0 0-1.2-2.9H4a1.7 1.7 0 0 1 0-3.4h.2a1.7 1.7 0 0 0 1.2-2.9l-.1-.1a1.7 1.7 0 0 1 2.4-2.4l.1.1a1.7 1.7 0 0 0 2.9-1.2V2a1.7 1.7 0 0 1 3.4 0v.2a1.7 1.7 0 0 0 2.9 1.2l.1-.1a1.7 1.7 0 0 1 2.4 2.4l-.1.1a1.7 1.7 0 0 0 1.2 2.9h.2a1.7 1.7 0 0 1 0 3.4h-.2a1.7 1.7 0 0 0-1.2 2.9Z"/></svg>
+</button></header>
+<div class="row" id="karmaRow" title="Открыть свой профиль"><span class="label">Карма</span><span class="value" id="karma">—</span></div>
+<div class="row" id="myRow" title="Открыть Мои вещи"><span class="label">Мои вещи</span><span class="value" id="my">—</span></div>
+<div class="row" id="inboxRow" title="Открыть Инбокс"><span class="label">Инбокс</span><span class="value" id="inbox">—</span></div>
+<div id="status" class="muted">Загрузка данных…</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
