@@ -2,7 +2,7 @@
 **Дополнительные опции кастомизации для сайта leprosorium.ru**
 
 - [Основные функции](#основные-функции)
-- [Установка в Chrome](#установка-в-chromium--chrome--edge)
+- [Установка](#установка-в-chromium--chrome--edge)
 
 ![main image](lepra_plus.png)
 
