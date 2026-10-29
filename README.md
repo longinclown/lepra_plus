@@ -4,7 +4,7 @@
 - [Основные функции](#основные-функции)
 - [Установка](#установка-в-chromium--chrome--edge)
 
-![main image](lepra_plus.png)
+![main image](lepra_plus_screen.png)
 
 ---
 
