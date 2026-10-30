@@ -26,7 +26,7 @@
 # Установка расширения
 ## Chrome
 #### Если конкретная сборка Chrome разрешает локальную установку CRX:
-1. Откройте в адресной строке **chrome://extensions**.
+1. Откройте в адресной строке **chrome://extensions**
 2. Переместите мышкой файл [lepra_plus_1.2_chrome_opera.crx](https://github.com/longinclown/lepra_plus/releases/download/lepra_plus_1.2/lepra_plus_1.2_chrome_opera.crx) в окно браузера со списком расширений.
 3. Если Chrome покажет запрос, нажмите «Установить расширение».
 
@@ -37,14 +37,14 @@
 
 ## Opera
 #### Если конкретная сборка Opera разрешает локальную установку CRX:
-1. Откройте **opera://extensions**.
+1. Откройте **opera://extensions**
 2. При необходимости включите «Режим разработчика».
 3. Переместите файл [lepra_plus_1.2_chrome_opera.crx](https://github.com/longinclown/lepra_plus/releases/download/lepra_plus_1.2/lepra_plus_1.2_chrome_opera.crx) мышкой в окно со списком расширений.
 4. Нажмите «Установить» и подтвердите «Да, установить».
 
 #### Если Opera не принимает CRX:
 1. Распакуйте [ZIP](https://github.com/longinclown/lepra_plus/releases/download/lepra_plus_1.2/lepra_plus_1.2.zip) в постоянную папку.
-2. Откройте **opera://extensions**.
+2. Откройте **opera://extensions**
 3. Включите «Режим разработчика» и нажмите «Загрузить распакованное».
 4. Выберите папку расширения с файлом manifest.json.
 
