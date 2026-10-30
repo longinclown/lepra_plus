@@ -28,13 +28,21 @@
 #### Если конкретная сборка Chrome/Opera разрешает локальную установку CRX:
 1. Откройте в адресной строке *chrome://extensions* (для Chrome) или *opera://extensions* (для Opera).
 2. При необходимости включите «Режим разработчика».
-3. Переместите мышкой файл [CRX](https://github.com/longinclown/lepra_plus/releases/latest/download/Lepra_plus_chrome_opera.crx) в окно браузера со списком расширений.
+3. Переместите мышкой файл **[CRX](https://github.com/longinclown/lepra_plus/releases/latest/download/Lepra_plus_chrome_opera.crx)** в окно браузера со списком расширений.
 4. В Chrome нажмите «Установить расширение». В Opera нажмите «Установить» и подтвердите «Да, установить».
 
 #### Если Chrome/Opera блокирует локальный CRX, используйте ZIP:
-1. Распакуйте [ZIP](https://github.com/longinclown/lepra_plus/releases/latest/download/lepra_plus_chrome_opera.zip) в постоянную папку.
+1. Распакуйте **[ZIP](https://github.com/longinclown/lepra_plus/releases/latest/download/lepra_plus_chrome_opera.zip)** в постоянную папку.
 2. Откройте *chrome://extensions* (для Chrome) или *opera://extensions* (для Opera) и включите «Режим разработчика».
 3. Нажмите «Загрузить распакованное» и выберите папку, в которой находится manifest.json
+
+## Через загрузчик юзерскриптов (Tampermonkey/Violentmonkey)
+**(только опции кастомизации сайта, без popup)**
+1. Установите загрузчик юзерскриптов: **[Tampermonkey](https://www.tampermonkey.net/)** (или **[Violentmonkey](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)** для Opera)
+2. Нажмите **[«Установить скрипт»](https://github.com/longinclown/lepra_plus/releases/latest/download/lepra_plus.user.js)**
+3. (для Opera) В настройках Violentmonkey включите опцию "Разрешить пользовательские скрипты".
+
+![tampermonkey script](lepra_plus_tampermonkey.png) ![violentmonkey script](lepra_plus_violentmonkey.png) 
 
 ---
 
