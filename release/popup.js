@@ -3,20 +3,20 @@ function show(data){
   $('karma').textContent=data.karma??'—';
   $('my').textContent=`${data.myunreadposts??'—'} / ${data.myunreadcomms??'—'}`;
   $('inbox').textContent=`${data.inboxunreadposts??'—'} / ${data.inboxunreadcomms??'—'}`;
-  if(data._cached){
-    const time=data._cacheTime?new Date(data._cacheTime).toLocaleString():'неизвестно когда';
-    $('status').textContent=`Показаны последние сохранённые данные (${time}). Откройте leprosorium.ru, чтобы обновить.`;
-    $('status').className='muted';
+  if(data._refreshError){
+    $('status').textContent='Не удалось обновить данные. Показан последний сохранённый результат.';
+    $('status').className='muted error';
   }else{
+    // Cached values are shown immediately; background refresh is intentionally quiet.
     $('status').textContent='';
     $('status').className='muted';
   }
   $('karmaRow').dataset.login=data.login||'';
 }
-async function load(force=true){
+async function load(){
   $('status').textContent='Загрузка данных…';$('status').className='muted';
   try{
-    const result=await chrome.runtime.sendMessage({type:'LEPRA_GET_PANEL',force});
+    const result=await chrome.runtime.sendMessage({type:'LEPRA_GET_PANEL'});
     if(!result||!result.ok)throw new Error(result?.error||'Не удалось получить данные');
     show(result.data);
   }catch(e){
@@ -26,6 +26,9 @@ async function load(force=true){
     $('status').className='muted error';
   }
 }
+chrome.runtime.onMessage.addListener(message=>{
+  if(message?.type==='LEPRA_PANEL_UPDATED' && message.data) show(message.data);
+});
 $('settings').addEventListener('click',()=>chrome.runtime.openOptionsPage());
 $('karmaRow').addEventListener('click',()=>{
   const login=$('karmaRow').dataset.login;
@@ -33,4 +36,4 @@ $('karmaRow').addEventListener('click',()=>{
 });
 $('myRow').addEventListener('click',()=>chrome.tabs.create({url:'https://leprosorium.ru/my/'}));
 $('inboxRow').addEventListener('click',()=>chrome.tabs.create({url:'https://leprosorium.ru/my/inbox/'}));
-load(true);
+load();

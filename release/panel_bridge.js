@@ -116,18 +116,10 @@
   }
 
   async function fetchCounter(type){
-    // Some installations expose only interest/unread_count; inbox/unread_count
-    // may return 404. The corresponding /moar/ response also contains unread_count.
-    const endpoint = `/ajax/${type}/unread_count/`;
-    try {
-      return await postJson(endpoint, {});
-    } catch (e) {
-      if (!String(e?.message || e).includes('HTTP 404')) throw e;
-      const params = type === 'interest'
-        ? {sort:'0', period:'30', unread:'1'}
-        : {sort:'3', unread:'1', filter_owner:'all'};
-      return await postJson(`/ajax/${type}/moar/`, params);
-    }
+    const params = type === 'interest'
+      ? {sort:'0', period:'30', unread:'1'}
+      : {sort:'3', unread:'1', filter_owner:'all'};
+    return await postJson(`/ajax/${type}/moar/`, params);
   }
 
   async function fetchPanel(selfLogin){
