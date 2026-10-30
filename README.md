@@ -53,4 +53,4 @@
 
 ---
 
-**++ в карму <a href="https://leprosorium.ru/users/gits/">gits</a>**
+<a href="https://leprosorium.ru/users/gits/">gits</a>
