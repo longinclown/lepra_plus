@@ -6,7 +6,7 @@
 - [Первое использование](#первое-использование)
 - [Описание](#описание)
 
-![main image](lepra_plus_scr.png)
+![main image](lepra_plus_1.2_scr.png)
 
 ---
 
